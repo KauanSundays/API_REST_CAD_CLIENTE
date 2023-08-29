@@ -12,9 +12,21 @@ class ClienteController extends Controller
     {
         return Cliente::all();
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'cliente' => 'required',
+            'endereco' => 'required',
+            'cidade' => 'required', 
+            'cep' => 'required',
+            'telefone' => 'required'
+        ]);
+    }
+
     public function show($id)
     {
-        return Cliente::all();
+        return Cliente::findOrfail($id);
     }
 
 }
