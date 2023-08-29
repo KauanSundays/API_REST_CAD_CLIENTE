@@ -18,7 +18,7 @@ class ClienteController extends Controller
         //
     }
 
-    public function show(string $id)
+    public function show($id)
     {
         //
     }
