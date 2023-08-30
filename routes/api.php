@@ -11,4 +11,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/clientes', [ClienteController::class, 'index']); //Rota principal
 Route::post('/clientes', [ClienteController::class, 'store']); //Envia para o BD
-Route::get('clientes', [ClienteController::class, 'show']); // Trazer informações do BD
+Route::get('/clientes/{id}', [ClienteController::class, 'show']); // Trazer informações do BD

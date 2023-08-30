@@ -22,9 +22,11 @@ class ClienteController extends Controller
             'cep' => 'required',
             'telefone' => 'required'
         ]);
+
+        return Cliente::create($request->all());
     }
 
-    public function show($id)
+    public function show($id) //pesquisa pelo o id
     {
         return Cliente::findOrfail($id);
     }
